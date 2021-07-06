@@ -1,0 +1,3314 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CF4DBF0A-E911-481E-9551-A17C9FAEE165}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>SangucheriaVenta.My.MyApplication</StartupObject>
+    <RootNamespace>SangucheriaVenta</RootNamespace>
+    <AssemblyName>SangucheriaVenta</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>SangucheriaVenta.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>SangucheriaVenta.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AdvancedDataGridView, Version=1.2.25707.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DG.AdvancedDataGridView.1.2.25707.1\lib\net40\AdvancedDataGridView.dll</HintPath>
+    </Reference>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.3.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.3.1\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="FontAwesome.Sharp, Version=5.14.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.5.14.1\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.6.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.6.1\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.1, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.1\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MySql.Data, Version=8.0.19.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.19\lib\net452\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Renci.SshNet, Version=2016.1.0.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106, processorArchitecture=MSIL">
+      <HintPath>..\packages\SSH.NET.2016.1.0\lib\net40\Renci.SshNet.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="Ubiety.Dns.Core, Version=2.2.1.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.19\lib\net452\Ubiety.Dns.Core.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenedores\frmDestinos.Designer.vb">
+      <DependentUpon>frmDestinos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenedores\frmDestinos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenedores\frmDestinosGrid.Designer.vb">
+      <DependentUpon>frmDestinosGrid.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenedores\frmDestinosGrid.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenedores\frmGarzones.Designer.vb">
+      <DependentUpon>frmGarzones.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenedores\frmGarzones.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenedores\frmGarzonesGrid.Designer.vb">
+      <DependentUpon>frmGarzonesGrid.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenedores\frmGarzonesGrid.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenedores\frmGrupos.Designer.vb">
+      <DependentUpon>frmGrupos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenedores\frmGrupos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenedores\frmGruposGrid.Designer.vb">
+      <DependentUpon>frmGruposGrid.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenedores\frmGruposGrid.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenedores\frmProductos.Designer.vb">
+      <DependentUpon>frmProductos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenedores\frmProductos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenedores\frmProductosGrid.Designer.vb">
+      <DependentUpon>frmProductosGrid.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenedores\frmProductosGrid.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenedores\frmRecetas.Designer.vb">
+      <DependentUpon>frmRecetas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenedores\frmRecetas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenedores\frmRecetasGrid.Designer.vb">
+      <DependentUpon>frmRecetasGrid.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenedores\frmRecetasGrid.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module1.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Print.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenedores\frmDestinos.resx">
+      <DependentUpon>frmDestinos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenedores\frmDestinosGrid.resx">
+      <DependentUpon>frmDestinosGrid.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenedores\frmGarzones.resx">
+      <DependentUpon>frmGarzones.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenedores\frmGarzonesGrid.resx">
+      <DependentUpon>frmGarzonesGrid.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenedores\frmGrupos.resx">
+      <DependentUpon>frmGrupos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenedores\frmGruposGrid.resx">
+      <DependentUpon>frmGruposGrid.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenedores\frmProductos.resx">
+      <DependentUpon>frmProductos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenedores\frmProductosGrid.resx">
+      <DependentUpon>frmProductosGrid.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenedores\frmRecetas.resx">
+      <DependentUpon>frmRecetas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenedores\frmRecetasGrid.resx">
+      <DependentUpon>frmRecetasGrid.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\accept.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\anchor.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\application.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\application_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\application_cascade.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\application_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\application_double.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\application_edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\application_error.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\application_form.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\application_form_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\application_form_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\application_form_edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\application_form_magnify.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\application_get.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\application_go.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\application_home.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\application_key.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\application_lightning.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\application_link.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\application_osx.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\application_osx_terminal.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\application_put.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\application_side_boxes.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\application_side_contract.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\application_side_expand.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\application_side_list.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\application_side_tree.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\application_split.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\application_tile_horizontal.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\application_tile_vertical.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\application_view_columns.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\application_view_detail.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\application_view_gallery.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\application_view_icons.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\application_view_list.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\application_view_tile.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\application_xp.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\application_xp_terminal.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\arrow_branch.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\arrow_divide.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\arrow_down.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\arrow_in.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\arrow_inout.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\arrow_join.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\arrow_left.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\arrow_merge.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\arrow_out.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\arrow_redo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\arrow_refresh.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\arrow_refresh_small.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\arrow_right.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\arrow_rotate_anticlockwise.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\arrow_rotate_clockwise.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\arrow_switch.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\arrow_turn_left.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\arrow_turn_right.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\arrow_undo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\arrow_up.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\asterisk_orange.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\asterisk_yellow.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\attach.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\award_star_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\award_star_bronze_1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\award_star_bronze_2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\award_star_bronze_3.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\award_star_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\award_star_gold_1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\award_star_gold_2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\award_star_gold_3.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\award_star_silver_1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\award_star_silver_2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\award_star_silver_3.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\basket.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\basket_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\basket_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\basket_edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\basket_error.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\basket_go.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\basket_put.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\basket_remove.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\bell.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\bell_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\bell_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\bell_error.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\bell_go.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\bell_link.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\bin.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\bin_closed.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\bin_empty.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\bomb.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\book.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\book_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\book_addresses.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\book_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\book_edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\book_error.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\book_go.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\book_key.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\book_link.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\book_next.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\book_open.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\book_previous.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\box.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\brick.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\brick_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\brick_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\brick_edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\brick_error.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\brick_go.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\brick_link.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\bricks.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\briefcase.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\bug.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\bug_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\bug_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\bug_edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\bug_error.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\bug_go.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\bug_link.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\building.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\building_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\building_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\building_edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\building_error.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\building_go.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\building_key.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\building_link.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\bullet_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\bullet_arrow_bottom.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\bullet_arrow_down.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\bullet_arrow_top.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\bullet_arrow_up.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\bullet_black.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\bullet_blue.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\bullet_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\bullet_disk.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\bullet_error.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\bullet_feed.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\bullet_go.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\bullet_green.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\bullet_key.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\bullet_orange.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\bullet_picture.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\bullet_pink.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\bullet_purple.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\bullet_red.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\bullet_star.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\bullet_toggle_minus.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\bullet_toggle_plus.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\bullet_white.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\bullet_wrench.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\bullet_yellow.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\cake.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\calculator.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\calculator_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\calculator_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\calculator_edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\calculator_error.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\calculator_link.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\calendar.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\calendar_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\calendar_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\calendar_edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\calendar_link.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\calendar_view_day.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\calendar_view_month.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\calendar_view_week.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\camera.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\camera_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\camera_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\camera_edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\camera_error.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\camera_go.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\camera_link.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\camera_small.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\cancel.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\car.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\car_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\car_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\cart.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\cart_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\cart_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\cart_edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\cart_error.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\cart_go.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\cart_put.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\cart_remove.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\cd.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\cd_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\cd_burn.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\cd_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\cd_edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\cd_eject.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\cd_go.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\chart_bar.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\chart_bar_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\chart_bar_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\chart_bar_edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\chart_bar_error.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\chart_bar_link.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\chart_curve.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\chart_curve_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\chart_curve_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\chart_curve_edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\chart_curve_error.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\chart_curve_go.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\chart_curve_link.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\chart_line.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\chart_line_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\chart_line_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\chart_line_edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\chart_line_error.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\chart_line_link.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\chart_organisation.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\chart_organisation_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\chart_organisation_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\chart_pie.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\chart_pie_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\chart_pie_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\chart_pie_edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\chart_pie_error.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\chart_pie_link.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\clock.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\clock_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\clock_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\clock_edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\clock_error.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\clock_go.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\clock_link.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\clock_pause.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\clock_play.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\clock_red.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\clock_stop.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\cog.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\cog_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\cog_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\cog_edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\cog_error.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\cog_go.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\coins.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\coins_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\coins_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\color_swatch.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\color_wheel.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\comment.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\comment_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\comment_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\comment_edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\comments.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\comments_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\comments_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\compress.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\computer.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\computer_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\computer_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\computer_edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\computer_error.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\computer_go.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\computer_key.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\computer_link.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\connect.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\contrast.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\contrast_decrease.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\contrast_high.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\contrast_increase.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\contrast_low.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\control_eject.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\control_eject_blue.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\control_end.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\control_end_blue.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\control_equalizer.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\control_equalizer_blue.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\control_fastforward.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\control_fastforward_blue.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\control_pause.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\control_pause_blue.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\control_play.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\control_play_blue.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\control_repeat.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\control_repeat_blue.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\control_rewind.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\control_rewind_blue.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\control_start.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\control_start_blue.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\control_stop.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\control_stop_blue.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\controller.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\controller_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\controller_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\controller_error.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\creditcards.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\cross.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\css.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\css_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\css_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\css_go.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\css_valid.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\cup.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\cup_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\cup_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\cup_edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\cup_error.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\cup_go.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\cup_key.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\cup_link.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\cursor.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\cut.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\cut_red.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\database.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\database_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\database_connect.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\database_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\database_edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\database_error.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\database_gear.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\database_go.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\database_key.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\database_lightning.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\database_link.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\database_refresh.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\database_save.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\database_table.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\date.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\date_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\date_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\date_edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\date_error.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\date_go.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\date_link.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\date_magnify.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\date_next.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\date_previous.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\disconnect.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\disk.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\disk_multiple.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\door.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\door_in.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\door_open.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\door_out.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\drink.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\drink_empty.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\drive.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\drive_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\drive_burn.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\drive_cd.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\drive_cd_empty.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\drive_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\drive_disk.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\drive_edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\drive_error.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\drive_go.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\drive_key.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\drive_link.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\drive_magnify.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\drive_network.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\drive_rename.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\drive_user.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\drive_web.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\dvd.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\dvd_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\dvd_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\dvd_edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\dvd_error.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\dvd_go.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\dvd_key.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\dvd_link.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\email.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\email_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\email_attach.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\email_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\email_edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\email_error.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\email_go.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\email_link.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\email_open.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\email_open_image.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\emoticon_evilgrin.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\emoticon_grin.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\emoticon_happy.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\emoticon_smile.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\emoticon_surprised.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\emoticon_tongue.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\emoticon_unhappy.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\emoticon_waii.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\emoticon_wink.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\error.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\error_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\error_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\error_go.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\exclamation.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\eye.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\feed.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\feed_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\feed_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\feed_disk.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\feed_edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\feed_error.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\feed_go.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\feed_key.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\feed_link.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\feed_magnify.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\female.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\film.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\film_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\film_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\film_edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\film_error.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\film_go.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\film_key.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\film_link.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\film_save.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\find.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\flag_blue.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\flag_green.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\flag_orange.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\flag_pink.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\flag_purple.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\flag_red.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\flag_yellow.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\folder.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\folder_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\folder_bell.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\folder_brick.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\folder_bug.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\folder_camera.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\folder_database.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\folder_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\folder_edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\folder_error.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\folder_explore.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\folder_feed.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\folder_find.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\folder_go.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\folder_heart.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\folder_image.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\folder_key.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\folder_lightbulb.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\folder_link.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\folder_magnify.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\folder_page.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\folder_page_white.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\folder_palette.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\folder_picture.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\folder_star.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\folder_table.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\folder_user.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\folder_wrench.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\font.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\font_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\font_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\font_go.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\group.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\group_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\group_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\group_edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\group_error.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\group_gear.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\group_go.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\group_key.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\group_link.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\heart.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\heart_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\heart_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\help.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\hourglass.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\hourglass_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\hourglass_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\hourglass_go.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\hourglass_link.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\house.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\house_go.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\house_link.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\html.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\html_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\html_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\html_go.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\html_valid.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\image.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\image_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\image_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\image_edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\image_link.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\images.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\information.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\ipod.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\ipod_cast.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\ipod_cast_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\ipod_cast_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\ipod_sound.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\joystick.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\joystick_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\joystick_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\joystick_error.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\key.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\key_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\key_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\key_go.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\keyboard.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\keyboard_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\keyboard_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\keyboard_magnify.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\layers.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\layout.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\layout_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\layout_content.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\layout_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\layout_edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\layout_error.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\layout_header.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\layout_link.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\layout_sidebar.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\lightbulb.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\lightbulb_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\lightbulb_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\lightbulb_off.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\lightning.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\lightning_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\lightning_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\lightning_go.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\link.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\link_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\link_break.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\link_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\link_edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\link_error.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\link_go.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\lock.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\lock_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\lock_break.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\lock_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\lock_edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\lock_go.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\lock_open.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\lorry.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\lorry_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\lorry_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\lorry_error.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\lorry_flatbed.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\lorry_go.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\lorry_link.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\magifier_zoom_out.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\magnifier.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\magnifier_zoom_in.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\male.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\map.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\map_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\map_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\map_edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\map_go.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\map_magnify.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\medal_bronze_1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\medal_bronze_2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\medal_bronze_3.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\medal_bronze_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\medal_bronze_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\medal_gold_1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\medal_gold_2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\medal_gold_3.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\medal_gold_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\medal_gold_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\medal_silver_1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\medal_silver_2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\medal_silver_3.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\medal_silver_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\medal_silver_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\money.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\money_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\money_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\money_dollar.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\money_euro.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\money_pound.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\money_yen.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\monitor.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\monitor_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\monitor_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\monitor_edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\monitor_error.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\monitor_go.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\monitor_lightning.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\monitor_link.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\mouse.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\mouse_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\mouse_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\mouse_error.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\music.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\nc0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\nc1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\nd0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\nd1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\new.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\newspaper.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\newspaper_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\newspaper_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\newspaper_go.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\newspaper_link.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\note.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\note_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\note_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\note_edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\note_error.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\note_go.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\overlays.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\package.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\package_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\package_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\package_go.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\package_green.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\package_link.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\page.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\page_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\page_attach.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\page_code.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\page_copy.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\page_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\page_edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\page_error.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\page_excel.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\page_find.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\page_gear.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\page_go.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\page_green.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\page_key.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\page_lightning.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\page_link.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\page_paintbrush.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\page_paste.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\page_red.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\page_refresh.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\page_save.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\page_white.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\page_white_acrobat.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\page_white_actionscript.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\page_white_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\page_white_c.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\page_white_camera.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\page_white_cd.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\page_white_code.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\page_white_code_red.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\page_white_coldfusion.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\page_white_compressed.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\page_white_copy.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\page_white_cplusplus.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\page_white_csharp.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\page_white_cup.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\page_white_database.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\page_white_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\page_white_dvd.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\page_white_edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\page_white_error.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\page_white_excel.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\page_white_find.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\page_white_flash.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\page_white_freehand.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\page_white_gear.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\page_white_get.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\page_white_go.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\page_white_h.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\page_white_horizontal.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\page_white_key.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\page_white_lightning.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\page_white_link.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\page_white_magnify.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\page_white_medal.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\page_white_office.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\page_white_paint.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\page_white_paintbrush.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\page_white_paste.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\page_white_php.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\page_white_picture.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\page_white_powerpoint.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\page_white_put.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\page_white_ruby.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\page_white_stack.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\page_white_star.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\page_white_swoosh.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\page_white_text.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\page_white_text_width.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\page_white_tux.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\page_white_vector.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\page_white_visualstudio.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\page_white_width.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\page_white_word.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\page_white_world.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\page_white_wrench.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\page_white_zip.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\page_word.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\page_world.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\paintbrush.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\paintcan.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\palette.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\paste_plain.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\paste_word.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\pencil.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\pencil_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\pencil_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\pencil_go.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\phone.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\phone_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\phone_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\phone_sound.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\photo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\photo_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\photo_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\photo_link.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\photos.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\picture.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\picture_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\picture_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\picture_edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\picture_empty.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\picture_error.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\picture_go.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\picture_key.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\picture_link.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\picture_save.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\pictures.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\pilcrow.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\pill.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\pill_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\pill_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\pill_go.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\plugin.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\plugin_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\plugin_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\plugin_disabled.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\plugin_edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\plugin_error.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\plugin_go.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\plugin_link.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\printer.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\printer_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\printer_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\printer_empty.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\printer_error.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\rainbow.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\report.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\report_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\report_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\report_disk.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\report_edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\report_go.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\report_key.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\report_link.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\report_magnify.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\report_picture.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\report_user.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\report_word.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\resultset_first.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\resultset_last.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\resultset_next.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\resultset_previous.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\rosette.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\rss.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\rss_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\rss_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\rss_go.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\rss_valid.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\ruby.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\ruby_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\ruby_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\ruby_gear.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\ruby_get.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\ruby_go.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\ruby_key.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\ruby_link.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\ruby_put.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\script.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\script_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\script_code.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\script_code_red.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\script_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\script_edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\script_error.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\script_gear.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\script_go.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\script_key.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\script_lightning.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\script_link.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\script_palette.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\script_save.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\server.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\server_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\server_chart.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\server_compressed.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\server_connect.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\server_database.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\server_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\server_edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\server_error.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\server_go.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\server_key.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\server_lightning.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\server_link.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\server_uncompressed.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\shading.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\shape_align_bottom.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\shape_align_center.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\shape_align_left.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\shape_align_middle.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\shape_align_right.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\shape_align_top.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\shape_flip_horizontal.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\shape_flip_vertical.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\shape_group.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\shape_handles.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\shape_move_back.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\shape_move_backwards.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\shape_move_forwards.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\shape_move_front.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\shape_rotate_anticlockwise.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\shape_rotate_clockwise.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\shape_square.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\shape_square_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\shape_square_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\shape_square_edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\shape_square_error.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\shape_square_go.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\shape_square_key.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\shape_square_link.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\shape_ungroup.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\shield.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\shield_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\shield_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\shield_go.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\sitemap.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\sitemap_color.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\sound.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\sound_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\sound_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\sound_low.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\sound_mute.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\sound_none.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\spellcheck.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\sport_8ball.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\sport_basketball.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\sport_football.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\sport_golf.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\sport_raquet.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\sport_shuttlecock.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\sport_soccer.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\sport_tennis.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\star.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\status_away.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\status_busy.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\status_offline.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\status_online.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\stop.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\style.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\style_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\style_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\style_edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\style_go.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\sum.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\tab.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\tab_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\tab_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\tab_edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\tab_go.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\table.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\table_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\table_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\table_edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\table_error.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\table_gear.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\table_go.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\table_key.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\table_lightning.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\table_link.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\table_multiple.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\table_refresh.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\table_relationship.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\table_row_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\table_row_insert.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\table_save.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\table_sort.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\tag.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\tag_blue.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\tag_blue_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\tag_blue_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\tag_blue_edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\tag_green.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\tag_orange.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\tag_pink.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\tag_purple.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\tag_red.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\tag_yellow.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\Talwayseb - Acces 2007.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\Talwayseb - Excel 2007.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\Talwayseb - Infopatch 2007.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\Talwayseb - Office 2007.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\Talwayseb - Outlook 2007.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\Talwayseb - PowerPoint 2007.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\Talwayseb - Publisher 2007.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\Talwayseb - Word 2007.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\telephone.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\telephone_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\telephone_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\telephone_edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\telephone_error.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\telephone_go.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\telephone_key.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\telephone_link.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\television.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\television_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\television_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\text_align_center.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\text_align_justify.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\text_align_left.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\text_align_right.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\text_allcaps.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\text_bold.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\text_columns.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\text_dropcaps.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\text_heading_1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\text_heading_2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\text_heading_3.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\text_heading_4.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\text_heading_5.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\text_heading_6.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\text_horizontalrule.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\text_indent.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\text_indent_remove.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\text_italic.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\text_kerning.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\text_letter_omega.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\text_letterspacing.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\text_linespacing.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\text_list_bullets.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\text_list_numbers.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\text_lowercase.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\text_padding_bottom.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\text_padding_left.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\text_padding_right.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\text_padding_top.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\text_replace.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\text_signature.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\text_smallcaps.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\text_strikethrough.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\text_subscript.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\text_superscript.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\text_underline.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\text_uppercase.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\textfield.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\textfield_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\textfield_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\textfield_key.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\textfield_rename.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\thumb_down.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\thumb_up.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\tick.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\time.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\time_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\time_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\time_go.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\timeline_marker.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\transmit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\transmit_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\transmit_blue.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\transmit_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\transmit_edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\transmit_error.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\transmit_go.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\tux.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\user.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\user_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\user_comment.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\user_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\user_edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\user_female.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\user_go.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\user_gray.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\user_green.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\user_orange.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\user_red.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\user_suit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\vcard.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\vcard_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\vcard_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\vcard_edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\vector.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\vector_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\vector_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\wand.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\weather_clouds.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\weather_cloudy.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\weather_lightning.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\weather_rain.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\weather_snow.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\weather_sun.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\webcam.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\webcam_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\webcam_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\webcam_error.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\world.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\world_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\world_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\world_edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\world_go.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\world_link.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\wrench.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\wrench_orange.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\xhtml.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\xhtml_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\xhtml_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\xhtml_go.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\xhtml_valid.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\zoom.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\zoom_in.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\iconos\zoom_out.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
